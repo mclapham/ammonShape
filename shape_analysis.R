@@ -1,6 +1,6 @@
 
 #read ammonoid measurement data
-ammon<-read.csv("http://files.figshare.com/1839123/ammon.csv")
+ammon<-read.csv("http://files.figshare.com/1846468/ammon.csv")
 
 #read time interval data
 time_periods<-read.csv("http://paleobiodb.org/data1.1/intervals/list.txt?scale=1&min_ma=66&max_ma=425")
