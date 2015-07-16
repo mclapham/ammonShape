@@ -33,7 +33,7 @@ calc.si <- function(file_name, dig_method="dijkstra", window_edge=50, window_inc
 
     suture.ma <- smooth.spline(suture_sub$x, suture_sub$y, spar = smooth) #cubic spline smoothing to generate line
     
-    suture_pts <- data.frame(x=suture.ma$x, y=suture.ma$y) #extracts x/y points from spline fit
+    suture_pts <<- data.frame(x=suture.ma$x, y=suture.ma$y) #extracts x/y points from spline fit
     
     points(suture_pts, col=rainbow(nrow(suture_pts))) #plots points as quality control check
     
@@ -138,7 +138,7 @@ calc.si <- function(file_name, dig_method="dijkstra", window_edge=50, window_inc
     }
     
     #formats path into data frame of visited points
-    suture_pts <- data.frame(x=path_x, y=path_y)
+    suture_pts <<- data.frame(x=path_x, y=path_y)
     
     } else {
     stop("Invalid method name") #if the name is not spline or dijkstra
